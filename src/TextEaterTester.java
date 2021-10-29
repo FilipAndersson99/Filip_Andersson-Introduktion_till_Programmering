@@ -11,4 +11,14 @@ public class TextEaterTester {
         int expected = 0;
         assertEquals(expected, actual);
     }
+    @Test
+    public void testRowCounter() {
+        //Arrange
+        TextEater text = new TextEater();
+        //Act
+        int actual = text.rowCounter();
+        //Assert
+        int expected = 0;
+        assertEquals(expected, actual);
+    }
 }
