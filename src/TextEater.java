@@ -1,6 +1,7 @@
 public class TextEater {
     private int characters = 0;
     private int rows = 0;
+    private boolean stop = false;
     public void TextEater() {
     }
     public int characterCounter() {
@@ -10,10 +11,11 @@ public class TextEater {
         return rows;
     }
     public boolean stopTracker() {
-        return true;
+        return stop;
     }
     public void textAdder(String text) {
         if (text.equals("stop")) {
+            stop = true;
         } else {
             characters += text.length();
             rows++;

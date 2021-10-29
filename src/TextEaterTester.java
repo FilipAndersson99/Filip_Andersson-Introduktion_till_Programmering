@@ -28,7 +28,7 @@ public class TextEaterTester {
         //Act
         boolean actual = text.stopTracker();
         //Assert
-        boolean expected = true;
+        boolean expected = false;
         assertEquals(expected, actual);
     }
     @Test
@@ -67,6 +67,20 @@ public class TextEaterTester {
         int actual = text.rowCounter();
         //Assert
         int expected = 1;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testTypingMultipleRowsStop() {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText1 = "Hej";
+        text.textAdder(myText1);
+        String myText2 = "stop";
+        text.textAdder(myText2);
+        //Act
+        boolean actual = text.stopTracker();
+        //Assert
+        boolean expected = true;
         assertEquals(expected, actual);
     }
 }
