@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TextEaterTester {
     @Test
-    public void testCharacterCounter() {
+    public void testCharacterCounter () {
         //Arrange
         TextEater text = new TextEater();
         //Act
@@ -12,7 +12,7 @@ public class TextEaterTester {
         assertEquals(expected, actual);
     }
     @Test
-    public void testRowCounter() {
+    public void testRowCounter () {
         //Arrange
         TextEater text = new TextEater();
         //Act
@@ -22,7 +22,7 @@ public class TextEaterTester {
         assertEquals(expected, actual);
     }
     @Test
-    public void testStopTracker() {
+    public void testStopTracker () {
         //Arrange
         TextEater text = new TextEater();
         //Act
@@ -32,7 +32,7 @@ public class TextEaterTester {
         assertEquals(expected, actual);
     }
     @Test
-    public void testTypingStopCharacters() {
+    public void testTypingStopCharacters () {
         //Arrange
         TextEater text = new TextEater();
         //Act
@@ -42,7 +42,7 @@ public class TextEaterTester {
         assertEquals(expected, actual);
     }
     @Test
-    public void testTypingMultipleRowsChracters() {
+    public void testTypingMultipleRowsCharacters () {
         //Arrange
         TextEater text = new TextEater();
         String myText1 = "Hej";
@@ -56,7 +56,7 @@ public class TextEaterTester {
         assertEquals(expected, actual);
     }
     @Test
-    public void testTypingMultipleRowsRows() {
+    public void testTypingMultipleRowsRows () {
         //Arrange
         TextEater text = new TextEater();
         String myText1 = "Hej";
@@ -70,7 +70,7 @@ public class TextEaterTester {
         assertEquals(expected, actual);
     }
     @Test
-    public void testTypingMultipleRowsStop() {
+    public void testTypingMultipleRowsStop () {
         //Arrange
         TextEater text = new TextEater();
         String myText1 = "Hej";
@@ -81,6 +81,22 @@ public class TextEaterTester {
         boolean actual = text.stopTracker();
         //Assert
         boolean expected = true;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testTypingAfterStopCharacters () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText1 = "Hej";
+        text.textAdder(myText1);
+        String myText2 = "stop";
+        text.textAdder(myText2);
+        String myText3 = "Hej då";
+        text.textAdder(myText3);
+        //Act
+        int actual = text.characterCounter();
+        //Assert
+        int expected = 3;
         assertEquals(expected, actual);
     }
 }
