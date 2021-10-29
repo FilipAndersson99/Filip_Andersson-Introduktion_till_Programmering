@@ -55,4 +55,18 @@ public class TextEaterTester {
         int expected = 3;
         assertEquals(expected, actual);
     }
+    @Test
+    public void testTypingMultipleRowsRows() {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText1 = "Hej";
+        text.textAdder(myText1);
+        String myText2 = "stop";
+        text.textAdder(myText2);
+        //Act
+        int actual = text.rowCounter();
+        //Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
 }
