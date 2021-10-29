@@ -7,4 +7,7 @@ public class TextEater {
     public int rowCounter() {
         return 0;
     }
+    public boolean stopTracker() {
+        return false;
+    }
 }
