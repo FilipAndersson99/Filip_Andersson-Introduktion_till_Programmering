@@ -1,5 +1,5 @@
 public class TextEater {
-    public void TextEater() {
+    public TextEater(String text) {
     }
     public int characterCounter() {
         return 0;
@@ -8,6 +8,6 @@ public class TextEater {
         return 0;
     }
     public boolean stopTracker() {
-        return false;
+        return true;
     }
 }

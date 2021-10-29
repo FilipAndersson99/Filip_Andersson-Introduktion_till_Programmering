@@ -4,7 +4,8 @@ public class TextEaterTester {
     @Test
     public void testCharacterCounter() {
         //Arrange
-        TextEater text = new TextEater();
+        String myText = "stop";
+        TextEater text = new TextEater(myText);
         //Act
         int actual = text.characterCounter();
         //Assert
@@ -14,7 +15,8 @@ public class TextEaterTester {
     @Test
     public void testRowCounter() {
         //Arrange
-        TextEater text = new TextEater();
+        String myText = "stop";
+        TextEater text = new TextEater(myText);
         //Act
         int actual = text.rowCounter();
         //Assert
@@ -24,11 +26,23 @@ public class TextEaterTester {
     @Test
     public void testStopTracker() {
         //Arrange
-        TextEater text = new TextEater();
+        String myText = "stop";
+        TextEater text = new TextEater(myText);
         //Act
         boolean actual = text.stopTracker();
         //Assert
-        boolean expected = false;
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testTypingStopCharacters() {
+        //Arrange
+        String myText = "stop";
+        TextEater text = new TextEater(myText);
+        //Act
+        int actual = text.characterCounter();
+        //Assert
+        int expected = 0;
         assertEquals(expected, actual);
     }
 }
