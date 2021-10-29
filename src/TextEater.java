@@ -4,4 +4,7 @@ public class TextEater {
     public int characterCounter() {
         return 0;
     }
+    public int rowCounter() {
+        return 0;
+    }
 }
