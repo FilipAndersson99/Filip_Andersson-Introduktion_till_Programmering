@@ -21,4 +21,7 @@ public class TextEater {
             rows++;
         }
     }
+    public int wordCounter() {
+        return 1;
+    }
 }

@@ -99,4 +99,18 @@ public class TextEaterTester {
         int expected = 3;
         assertEquals(expected, actual);
     }
+    @Test
+    public void testWordCounterWord () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myString1 = "Hej";
+        text.textAdder(myString1);
+        String myString2 = "stop";
+        text.textAdder(myString2);
+        //Act
+        int actual = text.wordCounter();
+        //Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
 }
