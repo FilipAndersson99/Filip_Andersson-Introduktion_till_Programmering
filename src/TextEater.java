@@ -3,6 +3,7 @@ public class TextEater {
     private int rows = 0;
     private boolean stop = false;
     private int words = 0;
+    private String longest = " ";
     public void TextEater () {
     }
     public int characterCounter () {
@@ -23,6 +24,9 @@ public class TextEater {
                 stop = true;
                 rows--;
             } else if (!stop) {
+                if (text1[counter].length() > longest.length()) {
+                    longest = text1[counter];
+                }
                 characters += text1[counter].length();
                 words++;
             }
@@ -33,8 +37,7 @@ public class TextEater {
     public int wordCounter() {
         return words;
     }
-
     public String longestWord() {
-        return "heter";
+        return longest;
     }
 }
