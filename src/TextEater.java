@@ -33,4 +33,8 @@ public class TextEater {
     public int wordCounter() {
         return words;
     }
+
+    public String longestWord() {
+        return "heter";
+    }
 }

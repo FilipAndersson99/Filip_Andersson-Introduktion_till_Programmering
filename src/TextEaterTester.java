@@ -127,4 +127,16 @@ public class TextEaterTester {
         int expected = 3;
         assertEquals(expected, actual);
     }
+    @Test
+    public void testLongestWord () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText1 = "Hej vad heter du";
+        text.textAdder(myText1);
+        //Act
+        String actual = text.longestWord();
+        //Assert
+        String expected = "heter";
+        assertEquals(expected, actual);
+    }
 }
