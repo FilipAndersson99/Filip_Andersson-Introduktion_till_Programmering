@@ -7,6 +7,6 @@ public class Main {
             String myText = txt.nextLine();
             text.textAdder(myText);
         }
-        System.out.println(text.characterCounter()+" "+ text.rowCounter());
+        System.out.println(text.characterCounter()+" "+ text.rowCounter()+" "+ text.wordCounter());
     }
 }
