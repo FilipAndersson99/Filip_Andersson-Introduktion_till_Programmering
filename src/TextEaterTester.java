@@ -113,4 +113,18 @@ public class TextEaterTester {
         int expected = 1;
         assertEquals(expected, actual);
     }
+    @Test
+    public void testWordCounterSentence () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myString1 = "Hej på dig";
+        text.textAdder(myString1);
+        String myString2 = "stop";
+        text.textAdder(myString2);
+        //Act
+        int actual = text.wordCounter();
+        //Assert
+        int expected = 3;
+        assertEquals(expected, actual);
+    }
 }
