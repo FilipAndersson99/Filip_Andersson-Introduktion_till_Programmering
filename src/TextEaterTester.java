@@ -139,4 +139,52 @@ public class TextEaterTester {
         String expected = "heter";
         assertEquals(expected, actual);
     }
+    @Test
+    public void testStopNotAloneCharacters () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText = "Hej stop";
+        text.textAdder(myText);
+        //Act
+        int actual = text.characterCounter();
+        //Assert
+        int expected = 3;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testStopNotAloneRows () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText = "Hej stop";
+        text.textAdder(myText);
+        //Act
+        int actual = text.rowCounter();
+        //Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testStopNotLastCharacters () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText = "Hej stop då";
+        text.textAdder(myText);
+        //Act
+        int actual = text.characterCounter();
+        //Assert
+        int expected = 3;
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void testStopNotLastWords () {
+        //Arrange
+        TextEater text = new TextEater();
+        String myText = "Hej stop då";
+        text.textAdder(myText);
+        //Act
+        int actual = text.wordCounter();
+        //Assert
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
 }

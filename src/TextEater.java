@@ -22,7 +22,9 @@ public class TextEater {
         while (counter < counter1) {
             if (text1[counter].equals("stop")) {
                 stop = true;
-                rows--;
+                if (counter == 0) {
+                    rows--;
+                }
             } else if (!stop) {
                 if (text1[counter].length() > longest.length()) {
                     longest = text1[counter];
